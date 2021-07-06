@@ -1,0 +1,23 @@
+{
+  "name": "cursos-udemy",
+  "version": "1.0.0",
+  "description": "Repositório com os arquivos usados nos cursos da Udemy",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailsonjr/cursos-udemy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ailsonjr/cursos-udemy/issues"
+  },
+  "homepage": "https://github.com/ailsonjr/cursos-udemy#readme",
+  "dependencies": {
+    "nodemon": "^2.0.9"
+  }
+}

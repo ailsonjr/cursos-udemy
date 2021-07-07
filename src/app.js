@@ -1,8 +1,24 @@
-const http = require('http');
-const handle = require('./handle');
+const express = require('express');
+const bodyParser = require('body-parser');
+const home = require('./routes/home');
+const client = require('./routes/client');
+const app = express();
+const port = 3000;
 
-let server = http.createServer(handle);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-server.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000')
-})
+app.use('/', home);
+app.use('/client', client);
+
+app.listen(port, () => console.log(`App listening http://localhost:${port}`));
+
+
+// const http = require('http');
+// const handle = require('./handle');
+
+// let server = http.createServer(handle);
+
+// server.listen(3000, () => {
+//   console.log('Servidor rodando na porta 3000')
+// })

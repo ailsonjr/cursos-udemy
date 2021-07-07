@@ -1,12 +1,11 @@
 let express = require('express');
 let router = express.Router();
 
-router.use((req, res, next) => {
-  console.log('Middleware executado com sucesso!');
-  next();
+router.get('/', (req, res) => {
+  res.render('home', {
+    message: 'Hello World from home.js'
+  })
 });
-
-router.get('/', (req, res) => res.render('home'));
 router.get('/welcome', (req, res) => res.send('Welcome to Express'));
 
 router.get('/request/:name', (req, res) => res.send(req.params));
